@@ -1,6 +1,6 @@
 ---
-company: "The Hong Kong Polytechnic University"
-role: "BSc in Computer Science, Minor in Finance"
+school: "The Hong Kong Polytechnic University"
+degree: "BSc in Computer Science, Minor in Finance"
 dateStart: "09/01/2024"
 dateEnd: "Expected 2028"
 ---

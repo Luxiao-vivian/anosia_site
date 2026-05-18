@@ -8,7 +8,7 @@ export const SITE: Site = {
 }
 
 // Education Page
-export const WORK: Page = {
+export const EDUCATION: Page = {
   TITLE: "Education",
   DESCRIPTION: "My academic background.",
 }
@@ -39,7 +39,7 @@ export const LINKS: Links = [
   },
   { 
     TEXT: "Education", 
-    HREF: "/work", 
+    HREF: "/education", 
   },
   { 
     TEXT: "Blog", 
@@ -75,7 +75,7 @@ export const SOCIALS: Socials = [
     NAME: "LinkedIn",
     ICON: "linkedin",
     TEXT: "zhang-xulu",
-    HREF: "https://www.linkedin.com/in/zhang-xulu-00280834a/",
+    HREF: "https://www.linkedin.com/in/zhang-xulu-Anosia/",
   },
 ]
 
