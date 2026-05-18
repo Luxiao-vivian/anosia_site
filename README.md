@@ -1,89 +1,63 @@
-![Astro Sphere Lighthouse Score](_astrosphere.jpg)
+# Anosia's Space 🌌
 
-Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog theme based on my personal website.
+> 你好旅行者~ 欢迎造访我的宇宙！
 
-It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components.
+这里是 Vivian (Anosia) 的个人小站源码 —— 用来写博客、放项目、记录学习与生活。
 
-## 🚀 Deploy your own
+## ✨ 关于这个站点
 
-[![Deploy with Vercel](_deploy_vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-sphere)  [![Deploy with Netlify](_deploy_netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-sphere)
+这是我的个人主页，目前正在香港理工大学读 **BSc Computer Science (Minor in Finance)**。建这个站主要是想：
 
-## 📋 Features
+- 📝 写博客 —— 技术笔记、学习心得、随笔杂谈
+- 🚀 展示项目 —— 课程作业、自己折腾的小东西
+- 🎓 留档教育经历
+- 🪐 让有缘人能找到我
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
-- ✅ Code Blocks - copy to clipboard
+## 🛠️ 技术栈
 
-## 💯 Lighthouse score
-![Astro Sphere Lighthouse Score](_lighthouse.png)
+| Tech | 用来做什么 |
+| --- | --- |
+| [Astro](https://astro.build/) | 静态站点生成框架（核心） |
+| [Tailwind CSS](https://tailwindcss.com/) | 原子化 CSS 样式 |
+| [TypeScript](https://www.typescriptlang.org/) | 类型安全 |
+| [SolidJS](https://www.solidjs.com/) | 给少量需要状态的交互组件用 |
+| Markdown / MDX | 写博客和项目内容 |
 
-## 🕊️ Lightweight
-All pages under 100kb (including fonts)
+本站基于 [Astro Sphere](https://github.com/markhorn-dev/astro-sphere) 模板魔改而来，感谢 [@markhorn-dev](https://github.com/markhorn-dev)。
 
-## ⚡︎ Fast
-Rendered in ~40ms on localhost
+## 💻 本地运行
 
-## 📄 Configuration
+```bash
+npm install        # 装依赖
+npm run dev        # 启动开发服务器 → http://localhost:4321
+npm run build      # 构建生产版本到 ./dist/
+npm run preview    # 本地预览构建结果
+```
 
-The blog posts on the demo serve as the documentation and configuration.
+更多命令见 `package.json` 的 `scripts` 字段。
 
-## 💻 Commands
+## 📁 项目结构
 
-All commands are run from the root of the project, from a terminal:
+```
+src/
+├── components/         # 可复用组件（Header、Footer、卡片等）
+├── content/            # Markdown 内容
+│   ├── blog/           # 博客文章
+│   ├── projects/       # 项目展示
+│   ├── education/      # 教育经历
+│   └── legal/          # 隐私 / 条款
+├── layouts/            # 页面布局
+├── pages/              # 路由（一个文件 = 一个 URL）
+├── consts.ts           # 站点信息、导航链接、社交链接
+└── content/config.ts   # 内容集合的 schema 定义
+```
 
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
+## ✏️ 添加新内容
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run dev:network`     | Starts dev server on local network               |
-| `npm run sync`            | Generates TypeScript types for all Astro modules.|
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run preview:network` | Starts preview server on local network           |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run lint`            | Run ESLint                                       |
-| `npm run lint:fix`        | Auto-fix ESLint issues                           |
+新建一篇博客：在 `src/content/blog/` 下创建文件夹和 `index.md`，frontmatter 格式参考已有文章。具体字段定义见 `src/content/config.ts`。
 
-## 🗺️ Roadmap
+## 📝 License
 
-A few features I plan to implement
-- ⬜ Article Pages - Table of Contents
-- ⬜ Article Pages - Share on social media
+模板部分（[Astro Sphere](https://github.com/markhorn-dev/astro-sphere)）使用 MIT License。
 
-## ✨ Acknowledgement
-
-Theme inspired by [Paco Coursey](https://paco.me/), [Lee Robinson](https://leerob.io/) and [Hayden Bleasel](https://www.haydenbleasel.com/)
-
-
-## 🏛️ License
-
-MIT
-
-
-# 1.0.1 Update
-
-Added ability to run dev and preview on local network.
-added npm run dev:network
-added npm run preview:network
-
-Added slightly more particle density in both light and dark mode.
-
-Added subtle dark mode star and meteor animations.
-
-Removed eslint config
-
+站点内的原创内容（博客文章、项目介绍、个人信息等）版权归 **Anosia** 所有，未经许可请勿转载。
