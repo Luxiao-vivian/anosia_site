@@ -3,14 +3,14 @@ import type { Site, Page, Links, Socials } from "@types"
 // Global
 export const SITE: Site = {
   TITLE: "Anosia's space",
-  DESCRIPTION: "Welcome to Anosia's space, a portfolio and blog for designers and developers.",
+  DESCRIPTION: "你好旅行者~欢迎造访我的宇宙！",
   AUTHOR: "Anosia",
 }
 
-// Work Page
+// Education Page
 export const WORK: Page = {
-  TITLE: "Work",
-  DESCRIPTION: "Places I have worked.",
+  TITLE: "Education",
+  DESCRIPTION: "My academic background.",
 }
 
 // Blog Page
@@ -22,7 +22,7 @@ export const BLOG: Page = {
 // Projects Page 
 export const PROJECTS: Page = {
   TITLE: "Projects",
-  DESCRIPTION: "Recent projects I have worked on.",
+  DESCRIPTION: "Class projects and self-interest projects.",
 }
 
 // Search Page
@@ -38,7 +38,7 @@ export const LINKS: Links = [
     HREF: "/", 
   },
   { 
-    TEXT: "Work", 
+    TEXT: "Education", 
     HREF: "/work", 
   },
   { 
@@ -56,26 +56,26 @@ export const SOCIALS: Socials = [
   { 
     NAME: "Email",
     ICON: "email", 
-    TEXT: "markhorn.dev@gmail.com",
-    HREF: "mailto:markhorn.dev@gmail.com",
+    TEXT: "vivianlulu1010@gmail.com",
+    HREF: "mailto:vivianlulu1010@gmail.com",
+  },
+  { 
+    NAME: "Email",
+    ICON: "email", 
+    TEXT: "xu-lu.zhang@connect.polyu.hk",
+    HREF: "mailto:xu-lu.zhang@connect.polyu.hk",
   },
   { 
     NAME: "Github",
     ICON: "github",
-    TEXT: "markhorn-dev",
-    HREF: "https://github.com/markhorn-dev/astro-sphere"
+    TEXT: "Luxiao-vivian",
+    HREF: "https://github.com/Luxiao-vivian"
   },
   { 
     NAME: "LinkedIn",
     ICON: "linkedin",
-    TEXT: "markhorn-dev",
-    HREF: "https://www.linkedin.com/in/markhorn-dev/",
-  },
-  { 
-    NAME: "Twitter",
-    ICON: "twitter-x",
-    TEXT: "markhorn_dev",
-    HREF: "https://twitter.com/markhorn_dev",
+    TEXT: "zhang-xulu",
+    HREF: "https://www.linkedin.com/in/zhang-xulu-00280834a/",
   },
 ]
 
