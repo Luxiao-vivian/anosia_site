@@ -5,6 +5,8 @@ export type Page = {
 
 export interface Site extends Page {
   AUTHOR: string
+  LAUNCH_DATE: string
+  GOATCOUNTER_CODE: string
 }
 
 export type Links = {

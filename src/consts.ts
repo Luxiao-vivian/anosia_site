@@ -5,6 +5,10 @@ export const SITE: Site = {
   TITLE: "Anosia's Grove",
   DESCRIPTION: "Bienvenue dans la grove.",
   AUTHOR: "Anosia",
+  LAUNCH_DATE: "2026-05-18T00:00:00+08:00",
+  // GoatCounter site code from your subdomain, e.g. "anosia" for https://anosia.goatcounter.com
+  // Leave as "" to disable the public visitor counter and tracking script.
+  GOATCOUNTER_CODE: "anosia",
 }
 
 // Education Page

@@ -32,12 +32,21 @@ import Container from "@components/Container.astro"
               {SITE.TITLE}
             </a>
           </div>
-          <div class="flex gap-2 justify-center sm:justify-end items-center">
-            <span class="relative flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-            </span>
-            All systems normal
+          <div
+            class="flex flex-col sm:flex-row gap-1 sm:gap-4 justify-center sm:justify-end items-center text-sm"
+            data-launch-date={SITE.LAUNCH_DATE}
+            data-goatcounter-code={SITE.GOATCOUNTER_CODE}
+          >
+            <div class="flex gap-2 items-center">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+              <span>Grove uptime:&nbsp;<span id="grove-uptime" class="tabular-nums">—</span></span>
+            </div>
+            <div>
+              Visitors:&nbsp;<span id="grove-visitors" class="tabular-nums">—</span>
+            </div>
           </div>
         </div>
       </Container>
@@ -101,4 +110,80 @@ import Container from "@components/Container.astro"
 
   document.addEventListener("astro:after-swap", initializeBackToTop)
   initializeBackToTop()
+</script>
+
+<script is:inline>
+  (function () {
+    let uptimeTimer = null
+
+    function renderUptime() {
+      const el = document.getElementById("grove-uptime")
+      if (!el) return
+      const container = el.closest("[data-launch-date]")
+      const launchStr = container?.getAttribute("data-launch-date")
+      if (!launchStr) return
+      const launch = new Date(launchStr).getTime()
+      if (Number.isNaN(launch)) return
+
+      const diff = Date.now() - launch
+      if (diff < 0) {
+        el.textContent = "launching soon"
+        return
+      }
+      const sec = Math.floor(diff / 1000) % 60
+      const min = Math.floor(diff / 60000) % 60
+      const hr = Math.floor(diff / 3600000) % 24
+      const day = Math.floor(diff / 86400000)
+      el.textContent = `${day}d ${hr}h ${min}m ${sec}s`
+    }
+
+    function startUptime() {
+      renderUptime()
+      if (uptimeTimer) clearInterval(uptimeTimer)
+      uptimeTimer = setInterval(renderUptime, 1000)
+    }
+
+    startUptime()
+    document.addEventListener("astro:after-swap", startUptime)
+  })()
+</script>
+
+<script is:inline define:vars={{ GOATCOUNTER_CODE: SITE.GOATCOUNTER_CODE }}>
+  (function () {
+    if (!GOATCOUNTER_CODE) return
+
+    function loadGoatCounter() {
+      if (document.getElementById("goatcounter-script")) return
+      const s = document.createElement("script")
+      s.id = "goatcounter-script"
+      s.async = true
+      s.src = "https://gc.zgo.at/count.js"
+      s.setAttribute(
+        "data-goatcounter",
+        `https://${GOATCOUNTER_CODE}.goatcounter.com/count`
+      )
+      document.body.appendChild(s)
+    }
+
+    function fetchVisitors() {
+      const el = document.getElementById("grove-visitors")
+      if (!el) return
+      fetch(
+        `https://${GOATCOUNTER_CODE}.goatcounter.com/counter/TOTAL.json`,
+        { mode: "cors" }
+      )
+        .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+        .then((data) => {
+          const value = data.count_unique ?? data.count
+          if (value != null) el.textContent = String(value)
+        })
+        .catch(() => {
+          el.textContent = "—"
+        })
+    }
+
+    loadGoatCounter()
+    fetchVisitors()
+    document.addEventListener("astro:after-swap", fetchVisitors)
+  })()
 </script>
