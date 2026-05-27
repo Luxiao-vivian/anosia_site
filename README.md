@@ -1,6 +1,6 @@
-# Anosia's Space 🌌
+# Anosia's Grove 🌿
 
-> 你好旅行者~ 欢迎造访我的宇宙！
+> Bienvenue dans la grove.
 
 这里是 Vivian (Anosia) 的个人小站源码 —— 用来写博客、放项目、记录学习与生活。
 

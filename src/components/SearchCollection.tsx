@@ -77,11 +77,11 @@ export default function SearchCollection({ entry_name, data, tags }: Props) {
           {/* Search Bar */}
           <SearchBar onSearchInput={onSearchInput} query={query} setQuery={setQuery} placeholderText={`Search ${entry_name}`} />
           {/* Tag Filters */}
-          <div class="relative flex flex-row justify-between w-full"><p class="text-sm font-semibold uppercase my-4 text-black dark:text-white">Tags</p>
+          <div class="relative flex flex-row justify-between w-full"><p class="text-sm font-semibold uppercase my-4 text-ink-900">Tags</p>
             {filter().size > 0 && (
               <button
                 onClick={clearFilters}
-                class="absolute flex justify-center items-center h-full w-10 right-0 top-0 stroke-neutral-400 dark:stroke-neutral-500 hover:stroke-neutral-600 hover:dark:stroke-neutral-300"
+                class="absolute flex justify-center items-center h-full w-10 right-0 top-0 stroke-ink-700/50 hover:stroke-olive-700"
               >
                 <svg class="size-5">
                   <use href={`/ui.svg#x`} />
@@ -97,17 +97,17 @@ export default function SearchCollection({ entry_name, data, tags }: Props) {
                     class={cn(
                       "w-full px-2 py-1 rounded",
                       "flex gap-2 items-center",
-                      "bg-black/5 dark:bg-white/10",
-                      "hover:bg-black/10 hover:dark:bg-white/15",
+                      "bg-olive-700/5",
+                      "hover:bg-olive-700/15",
                       "transition-colors duration-300 ease-in-out",
-                      filter().has(tag) && "text-black dark:text-white"
+                      filter().has(tag) && "text-olive-900"
                     )}
                   >
                     <svg
                       class={cn(
-                        "shrink-0 size-5 fill-black/50 dark:fill-white/50",
+                        "shrink-0 size-5 fill-ink-700/50",
                         "transition-colors duration-300 ease-in-out",
-                        filter().has(tag) && "fill-black dark:fill-white"
+                        filter().has(tag) && "fill-olive-700"
                       )}
                     >
                       <use
@@ -139,7 +139,7 @@ export default function SearchCollection({ entry_name, data, tags }: Props) {
             <div class="text-sm uppercase">
               SHOWING {collection().length} OF {data.length} {entry_name}
             </div>
-            <button onClick={toggleDescending} class='flex flex-row gap-1 stroke-neutral-400 dark:stroke-neutral-500 hover:stroke-neutral-600 hover:dark:stroke-neutral-300 text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 hover:dark:text-neutral-300'>
+            <button onClick={toggleDescending} class='flex flex-row gap-1 stroke-ink-700/50 hover:stroke-olive-700 text-ink-700/70 hover:text-olive-700'>
               <div class="text-sm uppercase">
                 {descending() ? "DESCENDING" : "ASCENDING"}
               </div>

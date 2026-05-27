@@ -2,8 +2,8 @@ import type { Site, Page, Links, Socials } from "@types"
 
 // Global
 export const SITE: Site = {
-  TITLE: "Anosia's space",
-  DESCRIPTION: "你好旅行者~欢迎造访我的宇宙！",
+  TITLE: "Anosia's Grove",
+  DESCRIPTION: "Bienvenue dans la grove.",
   AUTHOR: "Anosia",
 }
 

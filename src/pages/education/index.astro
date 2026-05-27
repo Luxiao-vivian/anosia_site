@@ -38,17 +38,17 @@ function formatEducationDate(input: Date | string) {
     <ul>
       { 
         education.map((entry) => (
-          <li class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
+          <li class="animate border-b border-bean-200 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
             <div class="text-sm uppercase mb-4">
               {formatEducationDate(entry.data.dateStart)} - {formatEducationDate(entry.data.dateEnd)}
             </div>
-            <div class="text-black dark:text-white font-semibold">
+            <div class="text-ink-900 font-semibold">
               {entry.data.school}
             </div>
             <div class="text-sm font-semibold">
               {entry.data.degree}
             </div>
-            <article class="prose dark:prose-invert">
+            <article class="prose">
               <entry.Content />
             </article>
           </li>
