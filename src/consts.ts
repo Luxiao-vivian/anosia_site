@@ -11,16 +11,16 @@ export const SITE: Site = {
   GOATCOUNTER_CODE: "anosia",
 }
 
-// Education Page
-export const EDUCATION: Page = {
-  TITLE: "Education",
-  DESCRIPTION: "My academic background.",
-}
-
 // Blog Page
 export const BLOG: Page = {
   TITLE: "Blog",
   DESCRIPTION: "Writing on topics I am passionate about.",
+}
+
+// Cabinet Page (a cabinet of curiosities — fragments, quotes, web findings)
+export const CABINET: Page = {
+  TITLE: "Cabinet",
+  DESCRIPTION: "A cabinet of curiosities — fragments, quotes, and things from the web worth keeping.",
 }
 
 // Projects Page 
@@ -42,16 +42,16 @@ export const LINKS: Links = [
     HREF: "/", 
   },
   { 
-    TEXT: "Education", 
-    HREF: "/education", 
-  },
-  { 
     TEXT: "Blog", 
     HREF: "/blog", 
   },
   { 
     TEXT: "Projects", 
     HREF: "/projects", 
+  },
+  { 
+    TEXT: "Cabinet", 
+    HREF: "/cabinet", 
   },
 ]
 

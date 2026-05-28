@@ -54,8 +54,11 @@ const { title, description, image = "/open-graph.jpg" } = Astro.props
 <script is:inline src="/js/animate.js"></script>
 <script defer is:inline src="/js/copy.js"></script>
 
-<!-- Vercel Web Analytics (auto-served by Vercel when enabled in the project dashboard) -->
-<script defer is:inline src="/_vercel/insights/script.js"></script>
+<!-- Vercel Web Analytics (auto-served by Vercel when enabled in the project dashboard).
+     Only injected in production builds to avoid noisy 404s during `npm run dev`. -->
+{import.meta.env.PROD && (
+  <script defer is:inline src="/_vercel/insights/script.js"></script>
+)}
 
 <!-- <ViewTransitions  /> -->
 
