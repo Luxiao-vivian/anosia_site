@@ -35,6 +35,12 @@ export const SEARCH: Page = {
   DESCRIPTION: "Search all posts and projects by keyword.",
 }
 
+// Chat Page (talk to Anosia's website persona, powered by the OpenAI API)
+export const CHAT: Page = {
+  TITLE: "Chat",
+  DESCRIPTION: "Chat with Anosia's website persona.",
+}
+
 // Links
 export const LINKS: Links = [
   { 
@@ -52,6 +58,10 @@ export const LINKS: Links = [
   { 
     TEXT: "Cabinet", 
     HREF: "/cabinet", 
+  },
+  { 
+    TEXT: "Chat", 
+    HREF: "/chat", 
   },
 ]
 

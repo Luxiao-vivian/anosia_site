@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <!-- 云朵形树冠 -->
+    <g fill="#3A5A40">
+      <circle cx="5"  cy="12" r="3.5"/>
+      <circle cx="8"  cy="7"  r="3.5"/>
+      <circle cx="13" cy="5"  r="3.5"/>
+      <circle cx="18" cy="8"  r="3.5"/>
+      <circle cx="19" cy="13" r="3.5"/>
+      <circle cx="11" cy="11" r="4.5"/>
+      <circle cx="15" cy="14" r="3.5"/>
+      <circle cx="9"  cy="14" r="3.5"/>
+    </g>
+    <!-- 枝杈 -->
+    <g stroke="#A3B18A" stroke-width="0.7" stroke-linecap="round" opacity="0.85">
+      <path d="M12 17 Q12 13 11.5 9"/>
+      <path d="M12 14 Q10 12 7 11"/>
+      <path d="M12 13 Q15 11 17 9"/>
+      <path d="M11.5 9 Q10 7 8 7"/>
+      <path d="M11.5 9 Q13 6 14.5 5"/>
+    </g>
+    <!-- 树干 -->
+    <rect x="11" y="17" width="2" height="4" rx="0.5" fill="#3A5A40"/>
+    <!-- 桂花 -->
+    <circle cx="8"    cy="6"  r="0.9" fill="#D4A24D"/>
+    <circle cx="14"   cy="4"  r="0.9" fill="#D4A24D"/>
+    <circle cx="17"   cy="9"  r="0.9" fill="#D4A24D"/>
+    <circle cx="6"    cy="11" r="0.9" fill="#D4A24D"/>
+    <circle cx="15.5" cy="12" r="0.9" fill="#D4A24D"/>
+    <circle cx="11"   cy="9"  r="0.9" fill="#D4A24D"/>
+</svg>

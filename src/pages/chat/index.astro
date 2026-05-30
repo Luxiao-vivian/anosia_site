@@ -1,0 +1,23 @@
+---
+import PageLayout from "@layouts/PageLayout.astro"
+import TopLayout from "@layouts/TopLayout.astro"
+import BottomLayout from "@layouts/BottomLayout.astro"
+import Chat from "@components/Chat"
+import { CHAT } from "@consts"
+---
+
+<PageLayout title={CHAT.TITLE} description={CHAT.DESCRIPTION}>
+  <TopLayout>
+    <div class="animate page-heading">
+      {CHAT.TITLE}
+    </div>
+    <p class="animate mt-2 text-ink-700/80">
+      和我的网站分身聊聊吧~ 它会模仿我的语气和你说话。
+    </p>
+  </TopLayout>
+  <BottomLayout>
+    <div class="animate">
+      <Chat client:only="solid-js" />
+    </div>
+  </BottomLayout>
+</PageLayout>
