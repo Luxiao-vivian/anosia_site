@@ -8,7 +8,8 @@ export const prerender = false
 const API_URL =
   "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 // 使用的模型。gemini-2.5-flash / gemini-2.5-flash-lite 都在免费额度内。
-const MODEL = "gemini-2.5-flash"
+// flash-lite 免费额度更高、响应更快。
+const MODEL = "gemini-2.5-flash-lite"
 // 单次发给模型的历史消息上限，避免请求过大 / 费用失控。
 const MAX_HISTORY = 12
 // 单条消息的最大字符数。
